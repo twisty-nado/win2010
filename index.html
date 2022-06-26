@@ -1,0 +1,441 @@
+<html>
+<head>
+    <script src="winbox.bundle.js"></script>
+    <title>Windows(R) Codename "2010"</title>
+    <link rel="icon" type="image/x-icon" href="wlg.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+        function openWinver() {
+            new WinBox("About Windows", {
+                border: "4px",
+                width: "384px",
+                height: "448px",
+                x: "100px",
+                y: "100px",
+                html: "<center><h1>Windows(R) Codename \"2010\"</h1> <br /> <p>Licensed to <br /> <br /> Twisty Nado</p></center>",
+                onblur: function () {
+                    this.setBackground("rgb(142 157 179 / 0.40)");
+                },
+                onfocus: function () {
+                    this.setBackground("rgb(162 177 199 / 0.60)");
+                },
+            });
+        }
+        
+        function openPinball() {
+            new WinBox("3D Pinball", {
+                border: "4px",
+                width: "627",
+                height: "500",
+                x: "100px",
+                y: "100px",
+                url: "https://rowan-bird.github.io/balls/",
+                class: [
+                    "no-min",
+                    "no-max",
+                    "no-full",
+                    "no-resize",
+                    "background"
+                ],
+                onblur: function () {
+                    this.setBackground("rgb(142 157 179 / 0.40)");
+                },
+                onfocus: function () {
+                    this.setBackground("rgb(162 177 199 / 0.60)");
+                },
+            });
+        }
+
+        function openWeb() {
+            new WinBox("Internet Explorer", {
+                border: "4px",
+                width: "800",
+                height: "600",
+                x: "100px",
+                y: "100px",
+                top: 0,
+                right: 0,
+                bottom: 40,
+                left: 0,
+                url: "bing.com",
+                onblur: function () {
+                    this.setBackground("rgb(142 157 179 / 0.40)");
+                },
+                onfocus: function () {
+                    this.setBackground("rgb(162 177 199 / 0.60)");
+                },
+            });
+        }
+
+        function openStart() {
+            var x = document.getElementById("startMenuId");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+    </script>
+    <style>
+        @keyframes login{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+                visibility: hidden;
+            }
+        }
+
+        @keyframes windows {
+            from {
+                position: absolute;
+                left: 100px;
+                top: 100px;
+                transform: perspective(2000px) rotateX(-25deg) scale(92%);
+                opacity: 0;
+            }
+
+            to {
+                position: absolute;
+                left: 100px;
+                top: 100px;
+                transform: rotateY(0deg) scale(100%);
+                opacity: 1;
+            }
+        }
+
+        html {
+            background-image: url(https://preview.redd.it/uaw22pu5c0871.jpg?auto=webp&s=59f9a447e2833491203b8e6e5340552780e69d4b);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: black;
+            font-family: 'Segoe UI';
+            margin: unset;
+            color: black;
+        }
+
+        body {
+            margin: unset;
+        }
+
+        .wb-min {
+            background: url(img/minimize.png) no-repeat center 10px, linear-gradient(hsla(0,0%,100%,.3),hsla(0,0%,100%,.3) 45%,rgba(0,0,0,.1) 50%,rgba(0,0,0,.1) 75%,hsla(0,0%,100%,.5));
+            border: 0;
+            border-radius: 0;
+            border-right: 1px solid rgba(0,0,0,.6);
+            box-shadow: inset 0 0 0 0.5px #eee;
+            box-sizing: border-box;
+            min-height: 20px;
+            min-width: 26px;
+            padding: 0;
+            position: relative;
+            border: 0;
+            border-bottom-left-radius: 4px;
+            width: 30px;
+            height: 22px;
+            margin-bottom: 15px;
+        }
+
+        .wb-full {
+            display: none
+        }
+
+        .wb-max {
+            background: url(img/maximize.png) no-repeat center center, linear-gradient(hsla(0,0%,100%,.3),hsla(0,0%,100%,.3) 45%,rgba(0,0,0,.1) 50%,rgba(0,0,0,.1) 75%,hsla(0,0%,100%,.5));
+            border: 0;
+            border-radius: 0;
+            border-right: 1px solid rgba(0,0,0,.6);
+            box-shadow: inset 0 0 0 0.5px #eee;
+            box-sizing: border-box;
+            min-height: 20px;
+            min-width: 26px;
+            padding: 0;
+            position: relative;
+            border: 0;
+            width: 30px;
+            height: 22px;
+            margin-bottom: 15px;
+        }
+
+        .wb-close {
+            background: url(img/close.png) no-repeat center center, linear-gradient(hsla(0,0%,100%,.3),hsla(0,0%,100%,.3) 45%,rgba(0,0,0,.1) 50%,rgba(0,0,0,.1) 75%,hsla(0,0%,100%,.5));
+            border: 0;
+            border-radius: 0;
+            border-right: 1px solid rgba(0,0,0,.6);
+            box-shadow: inset 0 0 0 0.5px #eee;
+            box-sizing: border-box;
+            min-height: 20px;
+            min-width: 26px;
+            padding: 0;
+            position: relative;
+            border: 0;
+            border-bottom-right-radius: 4px;
+            background-color: #d04a37;
+            width: 45px;
+            height: 22px;
+            margin-bottom: 15px;
+            margin-right: 6px;
+        }
+
+        .wb-title {
+            font-family: 'Segoe UI';
+            color: white;
+            text-shadow: 0 0 2px black;
+        }
+
+        .wb-header {
+            background: linear-gradient(55deg, transparent 1%, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.1) 30%, rgba(0, 0, 0, 0.1) 32%, rgba(0, 0, 0, 0.1) 55%, transparent 57%, rgba(255, 255, 255, 0.1) 70%, transparent 72%);
+        }
+
+        .winbox {
+            animation: windows 0.5s;
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(0, 0, 0, 0.6);
+            border-radius: 6px;
+            z-index: 0;
+            border: 1px solid rgba(0, 0, 0, 0.6);
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2)), linear-gradient(55deg, transparent, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.1) 50%, transparent 53%), #4580c4;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 0 16px black;
+        }
+
+        .wb-body {
+            margin: 6px;
+        }
+
+        .buildString {
+            position: absolute;
+            right: 0;
+            bottom: 40px;
+            text-align: right;
+            color: white;
+        }
+
+        .desktopIcons {
+            position: fixed;
+            color: white;
+            left: 16px;
+            top: 16px;
+        }
+
+        .desktopIcon {
+            width: 72px;
+            height: 128px;
+        }
+
+            .desktopIcon:hover {
+                border: solid;
+                border-width: 1px;
+                background-color: rgb(70 184 255 / 0.6);
+                border-color: rgb(70 184 255);
+                transform: translate(-1px, -1px);
+            }
+
+        .winbox:not(.focus) .wb-min {
+            opacity: 0.6;
+            background: url(img/minimize.png) no-repeat center 10px, linear-gradient(to right, rgb(255 255 255 / 0.00), rgb(255 255 255 / 0.00));
+        }
+
+        .winbox:not(.focus) .wb-max {
+            opacity: 0.6;
+            background: url(img/maximize.png) no-repeat center center, linear-gradient(to right, rgb(255 255 255 / 0.00), rgb(255 255 255 / 0.00));
+        }
+
+        .winbox:not(.focus) .wb-close {
+            opacity: 0.6;
+            background: url(img/close.png) no-repeat center center, linear-gradient(to right, rgb(255 255 255 / 0.00), rgb(255 255 255 / 0.00));
+        }
+
+        .winbox:not(.focus) {
+            box-shadow: 0 0 8px black;
+        }
+
+            .winbox:not(.focus) .wb-header {
+                opacity: 0.6;
+            }
+
+        .sb {
+            background-image: url(sb2.png);
+            background-size: cover;
+            background-position: 0 0;
+            position: absolute;
+            left: 7.5px;
+        }
+
+            .sb:hover {
+                background-image: url(sb2.png);
+                background-size: cover;
+                background-position: 0 50%;
+                position: absolute;
+                left: 7.5px;
+            }
+
+        .buttonStart {
+            width: 100%;
+            height: 36px;
+        }
+
+            .buttonStart:hover {
+                background-color: dodgerblue;
+            }
+
+        .wallpaper {
+            position: absolute;
+            bottom: 128px;
+            right: 16px;
+            background-color: rgb(142 157 179 / 0.40);
+            backdrop-filter: blur(4px);
+            width: 256px;
+            height: 64px;
+            border-radius: 4px;
+        }
+
+        .insideWallpaper {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            backdrop-filter: blur(4px);
+            width: 246px;
+            height: 54px;
+        }
+
+        .login {
+            position: fixed;
+            z-index: 9999;
+            background-image: url(https://cdn.wallpapersafari.com/95/85/431WEZ.jpg);
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .buttonlogin {
+            background: linear-gradient(55deg, transparent 1%, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.1) 30%, rgba(0, 0, 0, 0.1) 32%, rgba(0, 0, 0, 0.1) 55%, transparent 57%, rgba(255, 255, 255, 0.1) 70%, transparent 72%);
+            border: solid;
+            border-color: rgb(66 174 206);
+            border-radius: 4px;
+            border-width: 1px;
+            color:white;
+            width: 70px;
+            height: 24px;
+        }
+
+        .taskbarTexture {
+            background: linear-gradient(55deg, transparent 1%, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.1) 30%, rgba(0, 0, 0, 0.1) 32%, rgba(0, 0, 0, 0.1) 55%, transparent 57%, rgba(255, 255, 255, 0.1) 70%, transparent 72%);
+        }
+    </style>
+</head>
+<body>
+    <div class="login" id="login">
+        <div class="profile2" style="position: absolute; left: 50%; transform: translateX(-50%); top: 35%;">
+            <img src="https://th.bing.com/th/id/R.92c3cffb81568e305ba7a48fd59a32b3?rik=QPHzN%2fLnZkqSwg&riu=http%3a%2f%2fcdn.tweaks.com%2fimg%2farticle%2fdefaultuserpic.png&ehk=eKwSdvqRs%2fRWdvsmsemgXM%2bdVgwfhM159aOjqszi8bE%3d&risl=&pid=ImgRaw&r=0" style="width: 128px; height: 128px; border: solid; border-width: 8px; border-color: rgb(202 217 239 / 0.60); border-radius: 8px;" />
+            <p style="text-align: center; color: white; text-shadow: 0 0 2px black;">Twisty</p>
+            <button class="buttonlogin" style="position: relative; left: 50%; transform: translateX(-50%);" onclick="hideLogin()">Log in</button>
+        </div>
+        <script>
+            function hideLogin() {
+                var x = document.getElementById("login");
+                x.style.visibility = "hidden";
+            }
+        </script>
+    </div>
+    <div class="wallpaper" id="wallp" style="display: none;">
+        <div class="insideWallpaper">
+            <input type='file' id='files' name='files[]' />
+            <output id='list'></output>
+        </div>
+        <script>
+            function handleFileSelect(evt) {
+                var files = evt.target.files; // FileList object
+
+                // Loop through the FileList and render image files as thumbnails.
+                for (var i = 0, f; f = files[i]; i++) {
+
+                    // Only process image files.
+                    if (!f.type.match('image.*')) {
+                        continue;
+                    }
+
+                    var reader = new FileReader();
+
+                    // Closure to capture the file information.
+                    reader.onload = (function (theFile) {
+                        return function (e) {
+                            // Render thumbnail.
+                            $("html").css("background-image", "url(" + e.target.result + ")");
+                        };
+                    })(f);
+
+                    // Read in the image file as a data URL.
+                    reader.readAsDataURL(f);
+                }
+            }
+
+            document.getElementById('files').addEventListener('change', handleFileSelect, false);
+        </script>
+    </div>
+    <div class="taskbar" style="width: 100%; height: 40px; backdrop-filter: blur(4px); bottom: 0; position: absolute; z-index: 999; background-color: rgb(162 177 199 / 0.60); ">
+        <div class="taskbarTexture" style="width: 100%; height: 100%;">
+            <div onclick="openStart()" class="sb" style="width: 40px; height: 40px;"></div>
+            <img style="width: 38px; height: 38px; position: absolute; left: 105px; top: 50%; transform: translateY(-50%)" src="pinball.ico" onclick="openPinball()" />
+            <img style="width: 38px; height: 38px; position: absolute; left: 150px; top: 50%; transform: translateY(-50%)" src="wlg.png" onclick="openWinver()" />
+            <img style="width: 38px; height: 38px; position: absolute; left: 60px; top: 50%; transform: translateY(-50%)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Internet_Explorer_10%2B11_logo.svg/2085px-Internet_Explorer_10%2B11_logo.svg.png" onclick="openWeb()" />
+            <p id="time" style="position: absolute; right: 24px; line-height: 7.5px; color: white;">00:00</p>
+            <img src="https://img.icons8.com/ios-filled/344/my-computer--v3.png" style="position: absolute; right: 128px; top: 50%; transform: translateY(-50%); color: white; width: 24px; height: 24px; filter: invert(1)" onclick="openWallpaper()" />
+            <script>
+                function openWallpaper() {
+                    var x = document.getElementById("wallp");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                }
+            </script>
+            <script>
+                function getDayTime() {
+                    var dt = new Date();
+                    document.getElementById('time').innerHTML = dt.toLocaleTimeString();
+                }
+                setInterval('getDayTime()', 100);
+            </script>
+        </div>
+    </div>
+    <div class="startMenu" id="startMenuId" style="width: 384px; height: 512px; background-color: rgb(162 177 199 / 0.60); backdrop-filter: blur(4px); bottom: 40px; position: absolute; z-index: 999; display: none; border-top-right-radius: 4px;">
+        <div class="taskbarTexture" style="width: 100%; height: 100%;">
+            <div class="insideStart" style="width: 60%; height: 492px; background-color: white; position: relative; left: 10px; top: 10px; border-radius: 4px;">
+                <div class="buttonStart" onclick="openWinver(), openStart()">
+                    <img style="width: 32px; height: 32px; display: inline-block; filter: invert(1)" src="wlg.png" />
+                    <p style="display: inline-block; color: white; text-shadow: 0 0 2px black; transform: translateY(-8px)">About Windows</p>
+                </div>
+                <div class="buttonStart" onclick="openPinball(), openStart()">
+                    <img style="width: 32px; height: 32px; display: inline-block;" src="pinball.ico" />
+                    <p style="display: inline-block; color: white; text-shadow: 0 0 2px black; transform: translateY(-8px)">3D Pinball</p>
+                </div>
+            </div>
+            <div class="profile" style="position: absolute; right: 12%; top: -24px;">
+                <img src="https://th.bing.com/th/id/R.92c3cffb81568e305ba7a48fd59a32b3?rik=QPHzN%2fLnZkqSwg&riu=http%3a%2f%2fcdn.tweaks.com%2fimg%2farticle%2fdefaultuserpic.png&ehk=eKwSdvqRs%2fRWdvsmsemgXM%2bdVgwfhM159aOjqszi8bE%3d&risl=&pid=ImgRaw&r=0" style="width: 48px; height: 48px; border: solid; border-color: rgb(202 217 239 / 0.60); border-radius: 4px;" />
+            </div>
+            <div class="sideStart" style="background: none; position: absolute; right: 25%; top: 24px; color: white; font-size: 14px; text-shadow: 0 0 2px black;">
+                <p>Twisty</p>
+            </div>
+        </div>
+        </div>
+        <div class="desktopIcons">
+            <div class="desktopIcon" onclick="openWinver()">
+                <img src="wlg.png" style="width: 72px; height: 72px;" />
+                <p style="text-align: center; bottom: 0px; left: 0; position: absolute; color: white; text-shadow: 0 0 2px black;">About Windows</p>
+            </div>
+        </div>
+        <p class="buildString" style="color: white; text-shadow: 0 0 2px black;">
+            Windows(R) Codename "2010" Development Operating System.
+            <br />
+            Copyright Microsoft(R) 1975-2010
+        </p>
+</body>
+</html>
